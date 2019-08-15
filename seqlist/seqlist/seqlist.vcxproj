@@ -115,12 +115,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="seqlist.h" />
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include="demo1_线性表顺序存储与实现.cpp" />
     <ClCompile Include="seqlist.cpp" />
-    <ClCompile Include="算法复杂度分析.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="seqlist.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

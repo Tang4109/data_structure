@@ -13,7 +13,7 @@
 
 using namespace std;
 
-long sum1(int n)//2n+4步----算法复杂度O(n）
+long sum1(int n)//2n+4步----算法时间复杂度O(n）
 {
 	long ret = 0;//1
 	int* array = (int*)malloc(n * sizeof(int));//1
@@ -30,7 +30,7 @@ long sum1(int n)//2n+4步----算法复杂度O(n）
 	return ret;
 } 
 
-long sum2(int n)//n+2步----算法复杂度O(n）
+long sum2(int n)//n+2步----算法时间复杂度O(n）
 {
 	long ret = 0;//1
 	int i = 0;//1
@@ -40,7 +40,7 @@ long sum2(int n)//n+2步----算法复杂度O(n）
 	} 
 	return ret;
 } 
-long sum3(int n)//2--和问题的规模没有关系----算法复杂度O(1）
+long sum3(int n)//2--和问题的规模没有关系----算法时间复杂度O(1）
 {
 	long ret = 0;//1
 	if (n > 0)

@@ -25,12 +25,12 @@ int main()
 	//´´½¨
 	SeqList* list = NULL;
 	list = SeqList_Create(10);
-	if (list==NULL)
-	{
-		ret = -1;
-		cout << "error:" << ret << endl;
-		return ret;
-	}
+	//if (list==NULL)
+	//{
+	//	ret = -1;
+	//	cout << "error:" << ret << endl;
+	//	return ret;
+	//}
 
 	Teacher t1, t2, t3, t4, t5;
 
@@ -41,7 +41,7 @@ int main()
 	t5.age = 35;
 
 	//²åÈë
-	ret = SeqList_Insert(list, (SeqListNode*)&t1, 0);
+	ret = SeqList_Insert(list, &t1, 0);
 	ret = SeqList_Insert(list, (SeqListNode*)&t2, 0);
 	ret = SeqList_Insert(list, (SeqListNode*)&t3, 0);
 	ret = SeqList_Insert(list, (SeqListNode*)&t4, 0);
