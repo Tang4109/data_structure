@@ -41,7 +41,7 @@ int main()
 	t5.age = 35;
 
 	//²åÈë
-	ret = SeqList_Insert(list, &t1, 0);
+	ret = SeqList_Insert(list, (SeqListNode*)&t1, 0);
 	ret = SeqList_Insert(list, (SeqListNode*)&t2, 0);
 	ret = SeqList_Insert(list, (SeqListNode*)&t3, 0);
 	ret = SeqList_Insert(list, (SeqListNode*)&t4, 0);

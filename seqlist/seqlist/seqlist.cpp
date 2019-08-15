@@ -2,7 +2,7 @@
 #include<iostream>
 using namespace std;
 
-typedef struct _tag_SeqList 
+struct _tag_SeqList 
 {
 	int length;
 	int capacity;
@@ -120,19 +120,20 @@ int SeqList_Insert(SeqList* list, SeqListNode* node, int pos)
 		return ret;
 	}
 	//容错修正
-	if (pos>tlist->length)
+	if (pos > tlist->length)
 	{
 		pos = tlist->length;
 	}
 
 	//元素后移
 	int i = 0;
-	for (i=tlist->capacity;i>pos;i--)
+	for (i = tlist->capacity; i>pos; i--)
 	{
 		tlist->node[i] = tlist->node[i - 1];
 	}
 	//元素插入
 	tlist->node[i] = (unsigned int)node;
+	tlist->length++;
 
 	return 0;
 
@@ -147,7 +148,7 @@ SeqListNode* SeqList_Get(SeqList* list, int pos)
 	{
 		ret = -1;
 		cout << "input err:" << ret << endl;
-		return;
+		return NULL;
 	}
 	tlist = (_tag_SeqList*)list;
 	return (SeqListNode*)tlist->node[pos];
@@ -157,7 +158,23 @@ SeqListNode* SeqList_Get(SeqList* list, int pos)
 //删除某一个位置的结点
 SeqListNode* SeqList_Delete(SeqList* list, int pos)
 {
-	return NULL;
+	int ret = 0;
+	int i = 0;
+	_tag_SeqList* tlist = NULL;
+	if (list == NULL || pos < 0)
+	{
+		ret = -1;
+		cout << "input err:" << ret << endl;
+		return NULL;
+	}
+	tlist = (_tag_SeqList*)list;
+	
+	for (i=pos+1;i<tlist->length;i++)
+	{
+		tlist->node[i - 1] = tlist->node[i];
+	}
+	tlist->length--;
+	return (SeqList*)tlist->node[pos];
 
 }
 
