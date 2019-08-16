@@ -49,8 +49,13 @@ int main()
 	selectionSort(d, 4);
 	SortTestHelper::printArray(d, 4);
 
-
 	delete[] arr;
+
+	n = 100000;
+	int* arr2 = SortTestHelper::generateRandomArray(n, 0, n);
+	SortTestHelper::testSort("selectionSort", selectionSort, arr2, n);
+	delete[] arr2;
+
 	cout<<"end.."<<endl;
 	system("pause");
 	return 0;

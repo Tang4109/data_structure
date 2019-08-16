@@ -72,6 +72,15 @@ namespace SortTestHelper
 
 	}
 
+	//¿½±´Êý×é
+	template<typename T>
+	T* copyIntArray(T a[], int n)
+	{
+		T* arr = new T[n];
+		copy(a, a + n, arr); //Éî¿½±´
+		return arr;
+	}
+
 
 
 }
