@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -20,8 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{55E5717F-7907-4001-9CA6-6B0DBD61F498}</ProjectGuid>
-    <RootNamespace>seqlist</RootNamespace>
+    <ProjectGuid>{893B5FA5-F98F-46C6-8A17-D4943F6725FF}</ProjectGuid>
+    <RootNamespace>linklist</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -115,11 +115,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="demo1_线性表顺序存储与实现.cpp" />
-    <ClCompile Include="seqlist.cpp" />
+    <ClCompile Include="dm01_线性表链式存储设计与实现_测试框架.cpp" />
+    <ClCompile Include="linklist.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="seqlist.h" />
+    <ClInclude Include="linklist.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

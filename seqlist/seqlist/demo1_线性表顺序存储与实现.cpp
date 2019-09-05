@@ -5,7 +5,7 @@
 
 ****************************************/
 
-#include<iostream>
+#include <iostream>
 #include "seqlist.h"
 
 using namespace std;
@@ -66,8 +66,6 @@ int main()
 	}
 	
 
-
-	
 	cout<<"end.."<<endl;
 	system("pause");
 	return 0;

@@ -15,6 +15,7 @@ SeqList* SeqList_Create(int capacity)
 {
 	int ret = 0;
 	_tag_SeqList* tmp = NULL;
+	cout << sizeof(_tag_SeqList) << endl;
 	tmp = new _tag_SeqList[sizeof(_tag_SeqList)];
 	if (tmp==NULL)
 	{
@@ -23,6 +24,7 @@ SeqList* SeqList_Create(int capacity)
 		return NULL;
 	}
 	//根据capacity的大小分配节点空间
+	cout << sizeof(unsigned int*) << endl;
 	tmp->node = new unsigned int[sizeof(unsigned int*)*capacity];
 	if (tmp->node==NULL)
 	{
